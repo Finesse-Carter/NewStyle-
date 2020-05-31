@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+.backGroundImg{
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.title{
+font-size: 8rem;
+margin-top: 0rem;
+}
+
+.leftSidebar{
+    padding-top: 3em;
+    width: 20%;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-y: hidden;
+    z-index: 1001;
+    background: #9593a5b6;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    font-size: 3rem;
+}
+.mainButtons{
+    color: white;
+}
