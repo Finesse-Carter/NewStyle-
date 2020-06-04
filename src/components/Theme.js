@@ -16,10 +16,7 @@ const theme = createMuiTheme({
       }, html: {
         fontSize: '62.5%', /* 62.5% of 16px = 10px */
       }, typography: {
-       h1:{
-        fontFamily: 'Lobster, cursive',
-        fontSize: '', 
-      },
+      
         subtitle1: {
           fontSize: 12,
         },

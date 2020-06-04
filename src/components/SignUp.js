@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/Login.css'
- const Login = () => {
+ const SignUp = () => {
     return (
 <>
 <div>
@@ -9,7 +9,7 @@ import '../css/Login.css'
             <div className="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
 
                 <span className="login100-form-title p-b-32">
-                    Account Login
+                Signup
                 </span>
 
                 <form action="/login" className="login100-form validate-form flex-sb flex-w" method="post">
@@ -32,7 +32,7 @@ import '../css/Login.css'
                     Login
                     </button>
                 </form>
-                <p>Need an account? <a href="/signup">Signup</a></p>
+                <p>Already have an account? <a href="/login">Login</a></p>
                 <p>Or go <a href="/">home</a>.</p>
 
             </div>
@@ -42,4 +42,4 @@ import '../css/Login.css'
         </>
     )
 }
-export default Login
+export default SignUp

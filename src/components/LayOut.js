@@ -1,34 +1,24 @@
 import React from 'react';
-// import Login from './components/Login'
+import Login from './Login'
 import '../css/LayOut.css'
-import { Button,Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import AwesomeSlider from 'react-awesome-slider';
-import{BrowserRouter as Router, Link} from "react-router-dom";
+import{BrowserRouter as Router, Link,Switch,Route} from "react-router-dom";
 import 'react-awesome-slider/dist/styles.css';
 import img1 from '../image/photo-1513298666969-adb84fcb4f67.jpg'
 import img2 from '../image/joshua-rawson-harris-L2kkaayv3YY-unsplash.jpg'
 import img3 from '../image/mike-von-_i9Sil-9fak-unsplash.jpg'
-import { makeStyles } from '@material-ui/core/styles';
-const useStyles = makeStyles((theme) => ({
- h1: {
-    ...theme.typography.h1,
-    fontFamily: 'Lobster, cursive',
-    padding: theme.spacing(1),
-  },
-}));
-
-
-
-
+function handleOne() {
+  return(
+    <a href="/login">
+    </a>
+  )
+}
 
 function Slider() {
-  
-
-  
   return(
     <>
     <Router>
-
     <AwesomeSlider >
    <div style={{backgroundImage: `url(${img1})`, position: 'relative',
     margin: 'auto',
@@ -36,14 +26,12 @@ function Slider() {
     backgroundRepeat: 'no-repeat' }}>
     <Title/>
     <>
-<Typography variant="h2">
+<Typography variant="h2" onClick={handleOne}>
 <>
-<Link to="/Login">Login</Link> <Link to="/SignUp">SignUp</Link>  
+<Link to="/login" onClick={handleOne} className='linkWhite'>Login</Link> <Link to="/SignUp" className='linkWhite'>SignUp</Link>  
 </>
 </Typography>
 </>
-
-{/* <MainButtons/> */}
     </div>
     <div style={{backgroundImage: `url(${img2})`, position: 'relative',
     margin: 'auto',
@@ -53,11 +41,11 @@ function Slider() {
 <>
 <Typography variant="h2">
 <>
-<Link to="/Login">Login</Link><Link to="/SignUp">SignUp</Link> 
+<Link to="/login" obclick={'/login'} className='linkWhite'>Login</Link><Link to="/SignUp"  className='linkWhite'>SignUp</Link> 
 </>
 </Typography>
 </>
-{/* <MainButtons/> */}
+
     </div>
     <div style={{backgroundImage: `url(${img3})` , position: 'relative',
     margin: 'auto',
@@ -67,61 +55,39 @@ function Slider() {
 <>
 <Typography variant="h2">
 <>
-<Link to="/Login">Login</Link> <Link to="/SignUp">SignUp</Link> 
+<Link to="/login" className='linkWhite'>Login</Link> <Link to="/SignUp" className='linkWhite'>SignUp</Link> 
 </>
 </Typography>
 </>
-{/* <MainButtons/> */}
+
     </div>
   </AwesomeSlider>
+    <Switch>
+  <Route path="/login">
+            <Login/>
+          </Route>
+  </Switch>
     </Router>
   </>
  )   
 }
 function Title() {
-  const classes = useStyles();
   return (
     <div>
-      <Typography variant="h1" className={classes.h1} style={{ fontFamily: 'Lobster, cursive' , fontSize:'20rem'}}>
+      <Typography variant="h1" color='primary' style={{ fontFamily: 'Lobster, cursive' , fontSize:'20rem'}}>
       Style
 </Typography>
     </div>
   )
 }
 
-function MainButtons(){
- return(
-<div className='mainButtons'>
-
-<>
-<Link to="/Login"></Link>
-
-<Button variant="contained" color="primary">Login</Button> <Button variant="contained" color="primary">SignUp</Button>
-</>
-</div>
-  )
-} 
-
-
-
-
 function LayOut() {
   
   return (
     
-    <div className="backGroundImg" >
-    
-        
-<Slider>
-      
-
- >
-
- 
-
-</Slider>
-     
-         </div>
+    <div className="backGroundImg" >        
+<Slider/>
+   </div>
     )
 }
 
