@@ -8,6 +8,7 @@ import 'react-awesome-slider/dist/styles.css';
 import img1 from '../image/photo-1513298666969-adb84fcb4f67.jpg'
 import img2 from '../image/joshua-rawson-harris-L2kkaayv3YY-unsplash.jpg'
 import img3 from '../image/mike-von-_i9Sil-9fak-unsplash.jpg'
+
 function handleOne() {
   return(
     <a href="/login">
@@ -41,7 +42,7 @@ function Slider() {
 <>
 <Typography variant="h2">
 <>
-<Link to="/login" obclick={'/login'} className='linkWhite'>Login</Link><Link to="/SignUp"  className='linkWhite'>SignUp</Link> 
+<Link to="/login" onClick={'/login'} className='linkWhite'>Login</Link><Link to="/SignUp"  className='linkWhite'>SignUp</Link> 
 </>
 </Typography>
 </>
@@ -55,7 +56,7 @@ function Slider() {
 <>
 <Typography variant="h2">
 <>
-<Link to="/login" className='linkWhite'>Login</Link> <Link to="/SignUp" className='linkWhite'>SignUp</Link> 
+<Link to="/login" onClick={'/login'} className='linkWhite'>Login</Link> <Link to="/SignUp" className='linkWhite'>SignUp</Link> 
 </>
 </Typography>
 </>
@@ -81,7 +82,7 @@ function Title() {
   )
 }
 
-function LayOut() {
+function Landing() {
   
   return (
     
@@ -91,6 +92,6 @@ function LayOut() {
     )
 }
 
-export default LayOut
+export default Landing
 
 
