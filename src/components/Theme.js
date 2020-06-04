@@ -1,6 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-
 const theme = createMuiTheme({
     palette: {
       primary: {
@@ -14,7 +13,24 @@ const theme = createMuiTheme({
         main: '#27455e',
         dark: '#1b3041',
         contrastText: '#000',
+      }, html: {
+        fontSize: '62.5%', /* 62.5% of 16px = 10px */
+      }, typography: {
+       h1:{
+        fontFamily: 'Lobster, cursive',
+        fontSize: '', 
       },
+        subtitle1: {
+          fontSize: 12,
+        },
+        body1: {
+          fontWeight: 500,
+        },
+        button: {
+          fontStyle: 'italic',
+        },
+      },
+     
     },
   });
 

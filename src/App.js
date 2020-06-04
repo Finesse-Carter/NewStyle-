@@ -2,7 +2,7 @@ import React from 'react';
 import {  ThemeProvider } from '@material-ui/core/styles';
 import './App.css';
 import theme from './components/Theme'
-
+import Login from './components/Login'
 import LayOut from './components/LayOut';
 import {
   BrowserRouter as Router,
@@ -18,6 +18,9 @@ function App() {
     <Switch>
     <Route exact path="/">
     <LayOut/>
+          </Route>
+          <Route exact path="/login">
+    <Login/>
           </Route>
         </Switch>
     </Router>
