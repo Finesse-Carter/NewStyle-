@@ -1,9 +1,8 @@
 import React from 'react';
-import Login from './Login'
 import '../css/LayOut.css'
 import { Typography } from '@material-ui/core';
 import AwesomeSlider from 'react-awesome-slider';
-import{BrowserRouter as Router, Link,Switch,Route} from "react-router-dom";
+import{Link} from "react-router-dom";
 import 'react-awesome-slider/dist/styles.css';
 import img1 from '../image/photo-1513298666969-adb84fcb4f67.jpg'
 import img2 from '../image/joshua-rawson-harris-L2kkaayv3YY-unsplash.jpg'
@@ -19,7 +18,7 @@ function handleOne() {
 function Slider() {
   return(
     <>
-    <Router>
+
     <AwesomeSlider >
    <div style={{backgroundImage: `url(${img1})`, position: 'relative',
     margin: 'auto',
@@ -42,7 +41,7 @@ function Slider() {
 <>
 <Typography variant="h2">
 <>
-<Link to="/login" onClick={'/login'} className='linkWhite'>Login</Link><Link to="/SignUp"  className='linkWhite'>SignUp</Link> 
+<Link to="/login" onClick={handleOne} className='linkWhite'>Login</Link><Link to="/SignUp"  className='linkWhite'>SignUp</Link> 
 </>
 </Typography>
 </>
@@ -56,20 +55,15 @@ function Slider() {
 <>
 <Typography variant="h2">
 <>
-<Link to="/login" onClick={'/login'} className='linkWhite'>Login</Link> <Link to="/SignUp" className='linkWhite'>SignUp</Link> 
+<Link to="/login" onClick={handleOne} className='linkWhite'>Login</Link> <Link to="/SignUp" className='linkWhite'>SignUp</Link> 
 </>
 </Typography>
 </>
 
     </div>
   </AwesomeSlider>
-    <Switch>
-  <Route path="/login">
-            <Login/>
-          </Route>
-  </Switch>
-    </Router>
-  </>
+ 
+ </>
  )   
 }
 function Title() {
