@@ -8,17 +8,11 @@ import img1 from '../image/photo-1513298666969-adb84fcb4f67.jpg'
 import img2 from '../image/joshua-rawson-harris-L2kkaayv3YY-unsplash.jpg'
 import img3 from '../image/mike-von-_i9Sil-9fak-unsplash.jpg'
 
-function handleOne() {
-  return(
-    <a href="/login">
-    </a>
-  )
-}
+
 
 function Slider() {
   return(
     <>
-
     <AwesomeSlider >
    <div style={{backgroundImage: `url(${img1})`, position: 'relative',
     margin: 'auto',
@@ -26,9 +20,9 @@ function Slider() {
     backgroundRepeat: 'no-repeat' }}>
     <Title/>
     <>
-<Typography variant="h2" onClick={handleOne}>
+<Typography variant="h2">
 <>
-<Link to="/login" onClick={handleOne} className='linkWhite'>Login</Link> <Link to="/SignUp" className='linkWhite'>SignUp</Link>  
+<Link to="/login" className='linkWhite'>Login</Link> <Link to="/SignUp" className='linkWhite'>SignUp</Link>  
 </>
 </Typography>
 </>
@@ -41,12 +35,11 @@ function Slider() {
 <>
 <Typography variant="h2">
 <>
-<Link to="/login" onClick={handleOne} className='linkWhite'>Login</Link><Link to="/SignUp"  className='linkWhite'>SignUp</Link> 
+<Link to="/login"  className='linkWhite'>Login</Link><Link to="/SignUp"  className='linkWhite'>SignUp</Link> 
 </>
 </Typography>
 </>
-
-    </div>
+ </div>
     <div style={{backgroundImage: `url(${img3})` , position: 'relative',
     margin: 'auto',
     backgroundSize: 'cover',
@@ -55,17 +48,17 @@ function Slider() {
 <>
 <Typography variant="h2">
 <>
-<Link to="/login" onClick={handleOne} className='linkWhite'>Login</Link> <Link to="/SignUp" className='linkWhite'>SignUp</Link> 
+<Link to="/login" className='linkWhite'>Login</Link> <Link to="/SignUp" className='linkWhite'>SignUp</Link> 
 </>
 </Typography>
 </>
-
     </div>
   </AwesomeSlider>
  
  </>
  )   
 }
+
 function Title() {
   return (
     <div>
@@ -77,15 +70,12 @@ function Title() {
 }
 
 function Landing() {
-  
-  return (
-    
-    <div className="backGroundImg" >        
+    return (
+      <div className="backGroundImg" >        
 <Slider/>
    </div>
     )
 }
-
 export default Landing
 
 
