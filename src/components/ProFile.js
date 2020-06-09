@@ -9,12 +9,13 @@ const items = [{ name:'shoes', colors:['b']},
 // {liked:"liked"},
 // {imgPath:""},
 // {imgUrl:""},
-{color:{r:42,g:51,b:76}},
+// {color:{r:42,g:51,b:76}},
 // {colors:[{r:42,g:51,b:76}]},
 // {clothing:""},
 // {shareFeed:null},
 // {title:"watch"},
 // {classIfLiked:""},
+{name:'Griditem'},
 {name:'Griditems'},
 {name:'jackets'}]
 
@@ -57,7 +58,21 @@ function Lists(props) {
 function Griditem(props){
 console.log(props.item)
     return(
-<>
+<div style={{backgroundColor: 'white'}}>
+
+<div style={{webkitBoxFlex: '0',
+msFlex: '0 0 33.33333%',
+flex: '0 0 33.33333%',
+maxWidth: '33.33333%',
+width: '100%',
+float: 'right',
+mozTransition: 'all 0.5s ease',
+oTransition: 'all 0.5s ease',
+webkitTransition: 'all 0.5s ease',
+msTransition: 'all 0.5s ease',
+transition: 'all 0.5s ease',
+// backgroundColor: 'white'
+}}>
 <Image/>
 <Lists/>
 <Delelet/> <Swatch/>
@@ -67,20 +82,21 @@ console.log(props.item)
 <h1>
   {props.item.name} 
 </h1>
-</>
+</div>
+</div>
 )
 }
 
 function ProFile() {
   const grid=[]  
     for(let i =0;i<items.length;i++){
-        const element = <Griditem item={items[i]}/>
+        const element = <Griditem item={items[i]} />
         grid.push(element)
     }
     return (
         <div>
            {grid}
-           <Griditem item={{name:'finesse'}}></Griditem>
+           <Griditem item={{name:'finesse'}} ></Griditem>
         </div>
     )
 }
