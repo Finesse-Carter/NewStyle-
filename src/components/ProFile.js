@@ -1,7 +1,8 @@
 import React from 'react'
+import Image from './Image'
 // import { List } from '@material-ui/core'
 
-const items = [{ name:'shoes', colors:['b']},
+  const items = [{ name:'shoes', imgUrl:'/img/even-fu-eSpruE7bK8U-unsplash.jpg'},
 // {_id:Object('5eaad392cc367357d8a7aabd')},
 // {posterId:Object('5eaa10a73e1eac13b4564b9d')},
 // {caption:""},
@@ -15,11 +16,11 @@ const items = [{ name:'shoes', colors:['b']},
 // {shareFeed:null},
 // {title:"watch"},
 // {classIfLiked:""},
-{name:'Griditem'},
-{name:'Griditems'},
-{name:'jackets'}]
+{name:'Griditem', imgUrl: '/img/eli-defaria-oV4PktGcXCs-unsplash.jpg' },
+{name:'Griditems', imgUrl: '/img/ian-dooley-TT-ROxWj9nA-unsplash.jpg'},
+{name:'jackets', imgUrl: '/img/mike-von-wINYGcOk-Ps-unsplash.jpg'}]
 
-function Swatch(params) {
+function Swatch(props) {
 return(
   <a href="/profile/fits/" className="matchPic">
                       <i className="fas fa-swatchbook"/>
@@ -33,21 +34,14 @@ function Delelet(props){
   )
 }
 
-function Image(props){
-  
-  return (
-<div>
-  <img src={props.imgUrl} alt={props.name} />
-</div>
-  )
-}
+
 
 function Lists(props) {
   return(
     <div>
       <ul>
         <>
-        <li className="colorDot far fa-circle">{props.color}</li><li className="colorDot far fa-circle">{props.colors}</li>
+        <li className="colorDot far fa-circle">{props.item.color}</li><li className="colorDot far fa-circle">{props.item.colors}</li>
         </>
       </ul>
     </div>
@@ -60,21 +54,9 @@ console.log(props.item)
     return(
 <div style={{backgroundColor: 'white'}}>
 
-<div style={{webkitBoxFlex: '0',
-msFlex: '0 0 33.33333%',
-flex: '0 0 33.33333%',
-maxWidth: '33.33333%',
-width: '100%',
-float: 'right',
-mozTransition: 'all 0.5s ease',
-oTransition: 'all 0.5s ease',
-webkitTransition: 'all 0.5s ease',
-msTransition: 'all 0.5s ease',
-transition: 'all 0.5s ease',
-// backgroundColor: 'white'
-}}>
-<Image/>
-<Lists/>
+
+<Image item={props.item}/>
+<Lists  item={props.item}/>
 <Delelet/> <Swatch/>
   
 
@@ -83,22 +65,25 @@ transition: 'all 0.5s ease',
   {props.item.name} 
 </h1>
 </div>
-</div>
+
 )
 }
 
 function ProFile() {
   const grid=[]  
     for(let i =0;i<items.length;i++){
-        const element = <Griditem item={items[i]} />
+        const element = <Griditem style={flexItem} item={items[i]} />
         grid.push(element)
     }
     return (
         <div>
            {grid}
-           <Griditem item={{name:'finesse'}} ></Griditem>
+           {/* <Griditem item={{name:'finesse'}} ></Griditem> */}
         </div>
     )
 }
-
+ const flexItem={
+   display:'flex',
+   
+ }
 export default ProFile
