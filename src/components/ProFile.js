@@ -22,7 +22,9 @@ import GridItems from './GridItems'
 
 function ProFile() {
   const grid=[]  
-    for(let i =0;i<items.length;i++){
+  // (var i = arr.length - 1; i >= 0; i--)
+  for(let i =items.length -1;i>=0;i--){
+  // {for(let i =0;i<items.length;i++){
         const element = <GridItems item={items[i]} />
         grid.push(element)
     }
