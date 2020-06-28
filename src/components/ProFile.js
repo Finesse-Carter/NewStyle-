@@ -1,5 +1,5 @@
 import React from 'react'
-import GridItem from './GridItems'
+import GridItems from './GridItems'
 // import { List } from '@material-ui/core'
 
   const items = [{ name:'shoes', imgUrl:'/img/even-fu-eSpruE7bK8U-unsplash.jpg'},
@@ -20,31 +20,28 @@ import GridItem from './GridItems'
 {name:'Griditems', imgUrl: '/img/ian-dooley-TT-ROxWj9nA-unsplash.jpg'},
 {name:'jackets', imgUrl: '/img/mike-von-wINYGcOk-Ps-unsplash.jpg'}]
 
-
-
-
-
-
-
-
-
-
-
 function ProFile() {
   const grid=[]  
     for(let i =0;i<items.length;i++){
-        const element = <GridItem style={flexItem} item={items[i]} />
+        const element = <GridItems item={items[i]} />
         grid.push(element)
     }
     return (
-        <div>
+        <div className='ProFile' style={flexContaioner}>
            {grid}
-           {/* <Griditem item={{name:'finesse'}} ></Griditem> */}
+           <GridItems item={{name:'finesse'}} ></GridItems>
         </div>
     )
 }
- const flexItem={
-   display:'flex',
-   
- }
-export default ProFile
+const flexContaioner={
+  display:'flex',
+  flexDirection: 'row-reverse',
+  justifyContent: 'center',
+  backgroundColor: 'white',
+  alignItems: 'flex-end',
+  flexWrap:' wrap-reverse',
+  alignContent: 'center',
+  flexFlow: 'row wrap-reverse',
+ 
+}
+ export default ProFile

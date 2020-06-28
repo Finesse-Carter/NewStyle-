@@ -1,27 +1,26 @@
 import React from 'react'
-import Swatch from './Swatch'
-import Delelet from './Delelet'
+
 import Image from './Image'
-import Lists from './Lists'
+
 
 function GridItem(props){
     console.log(props.item)
         return(
-    <div style={{backgroundColor: 'white'}}>
+    <div className='GridItem' style={flexItem} >
     
     
-    <Image item={props.item}/>
-    <Lists  item={props.item}/>
-    <Delelet/> <Swatch/>
+    <Image  item={props.item}/>
+    
       
-    
-    
-    <h1>
-      {props.item.name} 
-    </h1>
     </div>
     
     )
     }
+    
 
+    const flexItem={
+        order:-1,
+        flexBasis: 'auto',
+      }
+     
     export default GridItem
