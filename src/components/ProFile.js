@@ -17,6 +17,8 @@ import GridItems from './GridItems'
 // {title:"watch"},
 // {classIfLiked:""},
 {name:'Griditem', imgUrl: '/img/eli-defaria-oV4PktGcXCs-unsplash.jpg' },
+{name:'Griditem', imgUrl: '/img/eli-defaria-oV4PktGcXCs-unsplash.jpg' },
+{name:'Griditem', imgUrl: '/img/eli-defaria-oV4PktGcXCs-unsplash.jpg' },
 {name:'Griditems', imgUrl: '/img/ian-dooley-TT-ROxWj9nA-unsplash.jpg'},
 {name:'jackets', imgUrl: '/img/mike-von-wINYGcOk-Ps-unsplash.jpg'}]
 
@@ -31,7 +33,8 @@ function ProFile() {
     return (
         <div className='ProFile' style={flexContaioner}>
            {grid}
-           <GridItems item={{name:'finesse'}} ></GridItems>
+           {/* <GridItems item={{name:'finesse'}} ></GridItems> */}
+           
         </div>
     )
 }
@@ -41,9 +44,10 @@ const flexContaioner={
   justifyContent: 'center',
   backgroundColor: 'white',
   alignItems: 'flex-end',
-  flexWrap:' wrap-reverse',
+  flexWrap:' wrap',
   alignContent: 'center',
-  flexFlow: 'row wrap-reverse',
- 
+  flexFlow: 'row wrap',
+  width: '70%',
+  
 }
  export default ProFile
