@@ -1,5 +1,6 @@
 import React from 'react'
 import GridItems from './GridItems'
+import Aside from './Aside'
 // import { List } from '@material-ui/core'
 
   const items = [{ name:'shoes', imgUrl:'/img/even-fu-eSpruE7bK8U-unsplash.jpg'},
@@ -32,6 +33,7 @@ function ProFile() {
     }
     return (
         <div className='ProFile' style={flexContaioner}>
+           <Aside/>
            {grid}
            {/* <GridItems item={{name:'finesse'}} ></GridItems> */}
            
@@ -48,6 +50,6 @@ const flexContaioner={
   alignContent: 'center',
   flexFlow: 'row wrap',
   width: '70%',
-  
+  margin: 'auto',
 }
  export default ProFile

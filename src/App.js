@@ -21,13 +21,13 @@ function App() {
     <Route exact path="/">
     <Landing/>
           </Route>
-          <Route exact path="/signUp">
+          <Route exact path="/SignUp">
     <SignUp/>
           </Route>
-          <Route exact path="/login">
+          <Route exact path="/Login">
     <Login/>
           </Route>
-          <Route exact path="/profile-page">
+          <Route exact path="/Profile-Page">
     <ProFile/>
           </Route>
         </Switch>
