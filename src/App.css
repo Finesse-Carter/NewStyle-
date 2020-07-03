@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #000;
 }
 
 .App-logo {
@@ -35,4 +36,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.LandingSlider {
+  width: 100vw !important;
+  height: 100vh !important;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.LandingSlider div {
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: transparent;
+}
+
+.LandingSlider img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
 }
