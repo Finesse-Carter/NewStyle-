@@ -18,6 +18,8 @@ function GridItem(props){
     const flexItem={
         order:-1,
         flexBasis: 'auto',
-      }
+        // flexGrow:'1',
+        // justifyContent:'flex-end'
+        }
      
     export default GridItem

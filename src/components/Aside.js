@@ -1,10 +1,13 @@
 import React from 'react'
 import{Link} from "react-router-dom";
+import SocialMedia from './SocialMedia'
+
+
 function Aside() {
     return (
-        <div className="asideConntainer" style={aside}>
+        <div className="asideConntainer" style={asideConntainer}>
        
-    <aside className=''>
+    <aside className='aside' style={aside}>
     <Link to="/Profile-Page" >
     <span className="fas fa-camera-retro" style={{fontSize: '100px'}}/>
 </Link>
@@ -27,32 +30,30 @@ function Aside() {
       <div className="footer">
         <h3>Follow Us Here!</h3>
         <div className="justify-content-center">
-          <ul className="align-items-center">
-            <li className="align-items-center jusitfy-content-center">
-            <Link to="#"><i className="fab fa-facebook"></i></Link>
-            </li>
-            <li className="align-items-center jusitfy-content-center">
-            <Link to="https://twitter.com/CarterFinesse"><i className="fab fa-twitter"></i></Link></li>
-            <li className=""><Link to="#"><i class="icon-instagram"></i></Link>
-            </li>
-            <li className="align-items-center jusitfy-content-center">
-            <Link to="https://www.linkedin.com/in/finesse-carter-dev/"><i className="fab fa-linkedin"></i></Link>
-            </li>
-            <li className="align-items-center jusitfy-content-center">
-            <Link to="https://github.com/Finesse-Carter/NewStyle-">
-            <i className="fab fa-github"></i>
-            </Link>
-            </li>
-          </ul>
+          <SocialMedia/>
         </div>
       </div>
     </aside>
         </div>
     )
 }
-const aside={
+const asideConntainer={
   justifyContent: 'flex-start',
-  width: 300,
+  width: '20%',
+  height: '100%',
   backgroundColor: "#abaab9",
+}
+const aside={
+  border: '3px blue solid',
+  justifyContent:'center',
+  height: '657px',
+  paddingTop: '3em',
+    paddingBottom: '40px',
+    paddingLeft: '3em',
+    paddingRight: '3em',
+    position: 'fixed',
+    backgroundColor: "#abaab9",
+    overflowY: 'hidden',
+    zIndex: '1001',
 }
 export default Aside

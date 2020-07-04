@@ -21,7 +21,7 @@ function Image(props){
   }
   
   const pic ={ 
-    width: '300px',
+    width: '350px',
     // order:4,
   } 
     

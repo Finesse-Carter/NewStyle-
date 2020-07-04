@@ -53,7 +53,7 @@ const ProFileContaioner={
   flexWrap: " wrap",
   alignContent: "center",
   flexFlow: "row wrap",
-  width: "70%",
+  width: "80%",
   margin: 'auto',
   border: '3px blue solid',
 }
