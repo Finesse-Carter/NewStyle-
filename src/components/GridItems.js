@@ -8,16 +8,13 @@ function GridItem(props){
         return(
     <div className='GridItem' style={flexItem} >
     
-    
     <Image  item={props.item}/>
-    
       
     </div>
     
     )
     }
     
-
     const flexItem={
         order:-1,
         flexBasis: 'auto',

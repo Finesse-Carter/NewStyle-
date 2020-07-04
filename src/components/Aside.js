@@ -2,11 +2,11 @@ import React from 'react'
 import{Link} from "react-router-dom";
 function Aside() {
     return (
-        <div className="asideConntainer">
+        <div className="asideConntainer" style={aside}>
        
     <aside className=''>
     <Link to="/Profile-Page" >
-    <span className="fas fa-camera-retro"/>
+    <span className="fas fa-camera-retro" style={{fontSize: '100px'}}/>
 </Link>
       <h1 className="logo">
       <Link to="/Profile-Page" className=''>
@@ -50,5 +50,9 @@ function Aside() {
         </div>
     )
 }
-
+const aside={
+  justifyContent: 'flex-start',
+  width: 300,
+  backgroundColor: "#abaab9",
+}
 export default Aside
