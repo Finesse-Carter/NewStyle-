@@ -17,7 +17,7 @@ function Image(props){
     )
   }
   const flexItem={
-    // order:-1,
+    // border: '1px black solid',  
   }
   
   const pic ={ 

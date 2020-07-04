@@ -6,7 +6,7 @@ import SignUp from "./components/SignUp";
 import theme from "./components/Theme";
 import Login from "./components/Login";
 import Landing from "./components/Landing";
-import Aside from "./components/Aside"
+// import Aside from "./components/Aside"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
     <ProFile/>
           </Route>
         </Switch>
-    <Aside/>
+    {/* <Aside/> */}
     </Router>
 </ThemeProvider>
       

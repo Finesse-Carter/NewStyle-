@@ -1,6 +1,6 @@
 import React from "react";
 import GridItems from "./GridItems";
-
+import Aside from "./Aside"
 // import { List } from '@material-ui/core'
 
 const items = [
@@ -35,13 +35,16 @@ function ProFile() {
   }
   return (
     <div className="ProFile" style={flexContaioner}>
-      
+      <Aside/>
+      <div className="ProFileContaioner" style={ProFileContaioner}>
+
       {grid}
       {/* <GridItems item={{name:'finesse'}} ></GridItems> */}
+      </div>
     </div>
   );
 }
-const flexContaioner = {
+const ProFileContaioner={
   display: "flex",
   flexDirection: "row-reverse",
   justifyContent: "center",
@@ -52,5 +55,19 @@ const flexContaioner = {
   flexFlow: "row wrap",
   width: "70%",
   margin: 'auto',
+  border: '3px blue solid',
+}
+const flexContaioner = {
+  display: "flex",
+  // flexDirection: "row-reverse",
+  // justifyContent: "center",
+  backgroundColor: "white",
+  // alignItems: "flex-end",
+  // flexWrap: " wrap",
+  // alignContent: "center",
+  // flexFlow: "row wrap",
+  width: "100%",
+  // margin: 'auto',
+  // border: '3px blue solid',
 };
 export default ProFile;
