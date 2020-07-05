@@ -23,7 +23,7 @@ function Aside() {
           <Link to="/Profile-Page">Home</Link>
           </li>
           <li className="Gallery" style={li}>
-          <Link href="/Gallery">Gallery</Link>
+          <Link to="/Gallery">Gallery</Link>
           </li>
         </ul>
         </div>

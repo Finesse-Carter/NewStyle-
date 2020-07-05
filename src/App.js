@@ -6,6 +6,7 @@ import SignUp from "./components/SignUp";
 import theme from "./components/Theme";
 import Login from "./components/Login";
 import Landing from "./components/Landing";
+import Gallery from "./components/Gallery";
 // import Aside from "./components/Aside"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route exact path="/Profile-Page">
     <ProFile/>
+          </Route>
+          <Route exact path="/Gallery">
+    <Gallery/>
           </Route>
         </Switch>
     {/* <Aside/> */}
