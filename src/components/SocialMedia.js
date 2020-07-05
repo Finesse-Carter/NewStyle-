@@ -5,8 +5,9 @@ function SocialMedia() {
     return(
       <div >
         <ul >
-          <div className='row' >
-<div className='li' style={flex}>
+          <div className='row' style={ul}>
+          <h3>Follow Us Here!</h3>
+<div className='li' style={li}>
 
           <li className="align-items-center jusitfy-content-center" >
               <Link to="#"><i className="fab fa-facebook"></i></Link>
@@ -30,10 +31,14 @@ function SocialMedia() {
       </div>
     )
   }
-  const flex={
+  const ul={
+    paddingTop: ' 147%',
+  }
+  const li={
     display:'flex',
     justifyContent: 'center',
     fontSize: '2rem',
+    // paddingRight: '11px',
 }
 
   export default SocialMedia

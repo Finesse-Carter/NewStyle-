@@ -10,32 +10,45 @@ function Aside() {
     <aside className='aside' style={aside}>
     <Link to="/Profile-Page" >
     <span className="fas fa-camera-retro" style={{fontSize: '100px'}}/>
-</Link>
+
       <h1 className="logo">
-      <Link to="/Profile-Page" className=''>
+     
       Style
-        </Link>
       </h1>
+        </Link>
       <nav className="main-menu">
+        <div className='ul' style={ul}>
         <ul>
-          <li className="">
+          <li className="Home" style={li}>
           <Link to="/Profile-Page">Home</Link>
           </li>
-          <li className="">
+          <li className="Gallery" style={li}>
           <Link href="/Gallery">Gallery</Link>
           </li>
         </ul>
+        </div>
       </nav>
 
       <div className="footer">
-        <h3>Follow Us Here!</h3>
         <div className="justify-content-center">
+        
           <SocialMedia/>
         </div>
       </div>
     </aside>
         </div>
     )
+}
+const ul={
+  paddingTop: '63%',
+}
+const li={
+  margin: '0 0 15px 0',
+  padding: '0',
+  listStyle: 'none',
+  fontSize: '16px',
+  fontWeight: '700',
+
 }
 const asideConntainer={
   justifyContent: 'flex-start',
