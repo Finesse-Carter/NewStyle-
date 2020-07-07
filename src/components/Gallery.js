@@ -1,7 +1,7 @@
 import React from 'react'
-import Aside from './Aside'
-import ProFile from './ProFile'
-
+// import Aside from './Aside'
+// import ProFile from './ProFile'
+import Image from './Image'
 
   
 
@@ -12,8 +12,9 @@ function Gallery(props) {
     
         
         <div>
-            <Aside/>
-            <ProFile/>
+        <Image item={props.item}/>
+            {/* <Aside/>
+            <ProFile/> */}
             
     
         </div>

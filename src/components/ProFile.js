@@ -1,6 +1,7 @@
 import React from "react";
 import GridItems from "./GridItems";
 import Aside from "./Aside"
+import UserName from './UserName'
 // import { List } from '@material-ui/core'
 
 const items = [
@@ -18,6 +19,7 @@ const items = [
   // {shareFeed:null},
   // {title:"watch"},
   // {classIfLiked:""},
+  {userName:'bob'},
   { name: "Griditem", imgUrl: "/img/eli-defaria-oV4PktGcXCs-unsplash.jpg" },
   { name: "Griditem", imgUrl: "/img/eli-defaria-oV4PktGcXCs-unsplash.jpg" },
   { name: "Griditem", imgUrl: "/img/eli-defaria-oV4PktGcXCs-unsplash.jpg" },
@@ -25,17 +27,18 @@ const items = [
   { name: "jackets", imgUrl: "/img/mike-von-wINYGcOk-Ps-unsplash.jpg" },
 ];
 
-function ProFile() {
+function ProFile(props) {
   const grid = [];
-  // (var i = arr.length - 1; i >= 0; i--)
+ 
   for (let i = items.length - 1; i >= 0; i--) {
-    // {for(let i =0;i<items.length;i++){
+   
     const element = <GridItems item={items[i]} />;
     grid.push(element);
   }
   return (
     <div className="ProFile" style={flexContaioner}>
       <Aside/>
+      <UserName item={props.item}/>
       <div className="ProFileContaioner" style={ProFileContaioner}>
 
       {grid}
@@ -59,15 +62,8 @@ const ProFileContaioner={
 }
 const flexContaioner = {
   display: "flex",
-  // flexDirection: "row-reverse",
-  // justifyContent: "center",
   backgroundColor: "white",
-  // alignItems: "flex-end",
-  // flexWrap: " wrap",
-  // alignContent: "center",
-  // flexFlow: "row wrap",
   width: "100%",
-  // margin: 'auto',
-  // border: '3px blue solid',
+  
 };
 export default ProFile;
